@@ -364,6 +364,66 @@ section {
 }
 
 
+/* Add styles for the hamburger menu */
+.hamburger-menu {
+  position: relative;
+  display: none; /* Hide the hamburger menu by default */
+}
+
+.hamburger-icon {
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+.menu-links {
+  display: none; /* Hide menu links by default */
+  position: absolute;
+  top: 40px; /* Adjust this value to position below the icon */
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Background color for the dropdown */
+  text-align: center;
+  z-index: 1000;
+}
+
+.menu-links.open {
+  display: block; /* Show menu links when open class is added */
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links li a {
+  display: block;
+  padding: 10px;
+  color: #fff; /* Default text color */
+  text-decoration: none;
+}
+
+.menu-links li a:hover {
+  background-color: #555; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+  .hamburger-menu {
+      display: block; /* Show the hamburger menu on smaller screens */
+  }
+}
+
+
+
 /* FOOTER SECTION */
 
 footer {
